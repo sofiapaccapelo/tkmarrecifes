@@ -44,6 +44,7 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navegacion ul{
@@ -73,4 +74,51 @@ aside {
 
 .logo {
     width: 110px;
+}
+
+.menu-icon{
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+    }
+
+    .menu {
+        width: 25px;
+    }
+
+    .navegacion {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navegacion ul {
+        display: none;
+    }
+
+    .navegacion ul.show {
+        display: block;
+    }
+
+    .navegacion ul li {
+        display: block;
+    }
+    
+    .navegacion ul li a {
+        display: block;
+        padding: 15px 0;
+        transition: all 0,4s linear;
+        border-radius: 3px;
+    }
+    
+    .navegacion ul li a:hover {
+        background-color: rgba(222, 135, 135, .08);
+        display: flex;
+        align-items: center;
+        height: 3px;
 }
